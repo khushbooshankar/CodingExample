@@ -1,0 +1,72 @@
+#!/bin/bash
+#Practice: Looping concept
+#Tool:Ubuntu  Editor
+#Plateform: VMware Workstation 16 Player
+#Author: Khushboo
+#Script Start from here
+
+#For loop
+
+for i in 1 2 3 4 5
+do
+	echo $i
+done
+
+echo "-----------------------------------------"
+
+for i in {1..10}
+do
+	echo $i
+done
+
+echo "---------------------------------------"
+for i in {1..10..2}
+do
+	echo $i
+done
+echo "---------------------------------------"
+for (( i=0; i<5; i++))
+do
+	echo $i
+done
+
+echo "--------------------------------------"
+for command in ls pwd date
+do
+	echo "-------------$command----------- "
+	$command
+done
+
+
+echo " ----------------------------------------"
+
+for item in *
+do
+	if [ -d $item ]
+	then
+		echo $item
+	fi
+done
+
+echo "-----------------------------------------"
+# select loop
+
+select name in Harry Tom Jinny Ben
+do
+	case $name in
+	Harry)
+	echo Harry selected
+	;;
+	Tom)
+	echo Tom selected
+	;;
+	Jinny)
+	echo Jinny selected
+	;;
+	Ben)
+	echo Ben selected
+	;;
+	*)
+	echo " Error please provide the number between 1..4"
+	esac
+done

@@ -1,0 +1,49 @@
+#!/bin/bash
+#Practice: Shell Looping concept
+#Tool:Ubuntu  Editor
+#Plateform: VMware Workstation 16 Player
+#Author: Khushboo
+#Script Start from here
+
+# while loop
+count=1
+while [ $count -lt 10 ]
+do
+	echo "$count"
+	count=`expr $count + 1`
+done
+
+echo "----------------------------------------"
+
+#count=1
+#while [ $count -lt 10 ]
+#do
+#	echo "$count"
+#	count=` expr $count + 1 `
+#done
+#read -p "Enter a sentence " input_string
+#while [ "$input_string" != "bye" ]
+#do
+#	echo "Please enter something in (bye to quit)"
+#	echo "you entered string as : $input_string"
+#done
+count=1
+while [ $count -lt 10 ]
+do
+       echo "$count"
+       count=` expr $count + 1 `
+done
+#statement = Hello
+
+#while [ "$input_string" != "bye" ]
+#do
+#      echo "Please enter something in (bye to quit)"
+#	read -p "Enter a sentence " input_string
+#      echo "you entered string as : $input_string"
+#done
+while  [ $true ]
+do
+	echo "Please enter something in (^c to quit)"
+	read statement
+	echo "you entered /typed : $statement"
+done
